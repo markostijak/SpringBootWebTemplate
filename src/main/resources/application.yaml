@@ -1,0 +1,29 @@
+spring:
+  profiles:
+    active: dev
+  application:
+    name: 'Application name'
+
+---
+# production properties
+spring:
+  profiles: prod
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - metrics
+          - health
+          - info
+
+---
+# dev properties
+spring:
+  profiles: dev
+
+---
+# test properties
+spring:
+  profiles: test
