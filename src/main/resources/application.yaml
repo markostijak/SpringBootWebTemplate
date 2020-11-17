@@ -7,7 +7,9 @@ spring:
 ---
 # production properties
 spring:
-  profiles: prod
+  config:
+    activate:
+      on-profile: prod
 
 management:
   endpoints:
@@ -21,9 +23,13 @@ management:
 ---
 # dev properties
 spring:
-  profiles: dev
+  config:
+    activate:
+      on-profile: dev
 
 ---
 # test properties
 spring:
-  profiles: test
+  config:
+    activate:
+      on-profile: test
